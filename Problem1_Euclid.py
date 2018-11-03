@@ -31,6 +31,3 @@ if __name__ == '__main__':
 	print(gcd(4278,8602))
 	print(gcd(406,555))
 	print(gcd(244,354))
-
-"""
-Part 3.
