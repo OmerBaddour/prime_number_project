@@ -30,3 +30,4 @@ def sieve(n):
 
 if __name__ == '__main__':
 	print(sieve(100))
+	
