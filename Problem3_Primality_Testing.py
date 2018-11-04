@@ -34,7 +34,6 @@ def prime_test_trial(n):
 		#iterate through list of primes from 2 to sqrt(n), check for divisibility
 		if(primes[i] % n == 0):
 			solutions.append(primes[i])
-		i += 1
 
 	if(len(solutions) > 0):
 		return(str(n) + " is not prime.")
