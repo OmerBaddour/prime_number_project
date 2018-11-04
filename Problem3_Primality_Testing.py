@@ -29,10 +29,8 @@ def prime_test_trial(n):
 
 	primes = sieve(math.floor(math.sqrt(n)))
 	solutions = []
-	proceed = True
 	#track position
-	i = 0
-	while(proceed):
+	for i in range(0,len(primes)-1):
 		#iterate through list of primes from 2 to sqrt(n), check for divisibility
 		if(primes[i] % n == 0):
 			solutions.append(primes[i])
@@ -133,4 +131,4 @@ if __name__ == '__main__':
 	#tests
 	print(prime_test_trial(101))
 	print(prime_test_sieve(101))
-	print(prime_test_fermat(101))
+	print(prime_test_fermat(3487723))
