@@ -69,6 +69,7 @@ def sieve(n):
 def prime_test_sieve(n):
 
 	primes = sieve(n)
+	print(primes[len(primes)-1])
 	#if n is in sieve(n), we know n is prime
 	#only need to check last value of output of sieve(n), as sieve(n) only returns primes less than or equal to n
 	if(primes[len(primes)-1] == n):
@@ -130,4 +131,4 @@ if __name__ == '__main__':
 	#tests
 	print(prime_test_trial(101))
 	print(prime_test_sieve(101))
-	print(prime_test_fermat(3487723))
+	print(prime_test_fermat(6282946382916373))
