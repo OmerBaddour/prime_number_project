@@ -28,17 +28,14 @@ def sieve(n):
 def prime_test_trial(n):
 
 	primes = sieve(math.floor(math.sqrt(n)))
-	solutions = []
 	#track position
 	for i in range(0,len(primes)-1):
+		print(n % primes[i])
 		#iterate through list of primes from 2 to sqrt(n), check for divisibility
-		if(primes[i] % n == 0):
-			solutions.append(primes[i])
-
-	if(len(solutions) > 0):
-		return(str(n) + " is not prime.")
-	else:
-		return(str(n) + " is prime.")
+		if(n % primes[i] == 0):
+			return(str(n) + " is not prime.")
+		
+	return(str(n) + " is prime.")
 
 """
 Part 2.
@@ -128,6 +125,6 @@ def prime_test_fermat(p):
 
 if __name__ == '__main__':
 	#tests
-	print(prime_test_trial(101))
+	print(prime_test_trial(2222))
 	print(prime_test_sieve(101))
 	print(prime_test_fermat(2222222222))
