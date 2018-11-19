@@ -1,5 +1,6 @@
 import math
 import csv
+import matplotlib.pyplot as plt
 
 """
 reads in file of 1 million primes, returns list of primes
@@ -164,6 +165,22 @@ def twin_prime_counter():
 
 	return "The number of twin primes is: " + str(twinprimes)
 
+def plot_pi(x):
+	primes = get_primes()
+	primeset = set(primes)
+	x_li = []
+	y_li = []
+	primecount = 0
+	for i in range(x):
+		x_li.append(i)
+		if str(i) in primeset:
+			primecount += 1
+		y_li.append(primecount)
+	plt.plot(x_li, y_li)
+	plt.ylabel('# of primes < x')
+	plt.xlabel('ints < x')
+	plt.show()
+
 
 if __name__ == '__main__':
 	print(proportion_of_primes())
@@ -172,3 +189,4 @@ if __name__ == '__main__':
 	print(primes_ending_with_7_followed_by())
 	print(primes_ending_with_9_followed_by())
 	print(twin_prime_counter())
+	plot_pi(300000)
