@@ -16,9 +16,9 @@ def get_primes():
 def visualize(x):
 	primes = get_primes()
 	primeset = set(primes)
-	arr = np.zeros((int(math.sqrt(int(x)))+1,int(math.sqrt(int(x)))+1), dtype=int)
-	for i in range(int(math.sqrt(int(x)))+1):
-		for j in range(int(math.sqrt(int(x)))+1):
+	arr = np.zeros((int(math.sqrt(int(x))),int(math.sqrt(int(x)))), dtype=int)
+	for i in range(int(math.sqrt(int(x)))):
+		for j in range(int(math.sqrt(int(x)))):
 			num = i*int(math.sqrt(int(x)))+j
 			if str(num) in primeset:
 				arr[i,j] = 1;
